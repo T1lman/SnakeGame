@@ -3,6 +3,7 @@ package SnakeGame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 // Die Klasse StartScreen erweitert JFrame und repräsentiert den Startbildschirm des Spiels.
 public class StartScreen extends JFrame {
@@ -51,11 +52,6 @@ public class StartScreen extends JFrame {
         // Initialisierung des Importieren-Buttons
         importButton = new JButton("Importieren");
         importButton.setPreferredSize(new Dimension(150, 50));
-        importButton.addActionListener(e -> {
-            dispose();
-            game.loadGameState(null);
-            game.paused = true;
-        });
 
         // Initialisierung des Beenden-Buttons
         exitButton = new JButton("Beenden");

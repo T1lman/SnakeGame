@@ -6,7 +6,7 @@ Die Snake-Game-Anwendung ist in Java implementiert und verwendet die Swing-Bibli
 
 Die `SnakeGame`-Klasse ist die Hauptklasse, die das Spiel steuert und das Hauptfenster bereitstellt. Hier sind die wichtigsten Elemente und Funktionen dieser Klasse:
 
-### Elemente:
+#### Elemente:
 
 - `TILE_SIZE` und `GRID_SIZE`: Konstanten für die Größe der Kacheln und des Spielfelds.
 - `Direction`: Eine Aufzählung für die Richtungen der Schlange.
@@ -20,7 +20,7 @@ Die `SnakeGame`-Klasse ist die Hauptklasse, die das Spiel steuert und das Hauptf
 - `layeredPane`: Ein `JLayeredPane` für Überlagerungen wie den Pausebildschirm.
 - `pauseScreen` und `startScreen`: Instanzen der Klassen `PauseScreen` und `StartScreen`.
 
-### Methoden:
+#### Methoden:
 
 - `initializeFrame()`: Initialisiert das Hauptfenster.
 - `initializeGame()`: Initialisiert das Spiel und zeigt den Startbildschirm an.
@@ -46,13 +46,13 @@ Die `SnakeGame`-Klasse ist die Hauptklasse, die das Spiel steuert und das Hauptf
 
 Die `PauseScreen`-Klasse repräsentiert den Pausebildschirm während des Spiels. Hier sind die wichtigsten Elemente und Funktionen dieser Klasse:
 
-### Elemente:
+#### Elemente:
 
 - `game`: Eine Referenz auf die `SnakeGame`-Instanz.
 - `saveButton`, `exitButton`: `JButton`-Objekte für Aktionen wie Speichern und Beenden.
 - `scoreLabel`: Ein `JLabel` zur Anzeige der aktuellen Punktzahl.
 
-### Methoden:
+#### Methoden:
 
 - Konstruktor: Initialisiert die Elemente und erstellt die Benutzeroberfläche des Pausebildschirms.
 - `getSaveButton()`: Gibt den Speichern-Button zurück.
@@ -62,12 +62,12 @@ Die `PauseScreen`-Klasse repräsentiert den Pausebildschirm während des Spiels.
 
 Die `StartScreen`-Klasse repräsentiert den Startbildschirm vor dem Spiel. Hier sind die wichtigsten Elemente und Funktionen dieser Klasse:
 
-### Elemente:
+#### Elemente:
 
 - `game`: Eine Referenz auf die `SnakeGame`-Instanz.
 - `importButton`, `startButton`, `exitButton`: `JButton`-Objekte für Aktionen wie Importieren, Starten und Beenden.
 
-### Methoden:
+#### Methoden:
 
 - Konstruktor: Initialisiert die Elemente und erstellt die Benutzeroberfläche des Startbildschirms.
 - `getImportButton()`: Gibt den Import-Button zurück.

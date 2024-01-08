@@ -53,6 +53,7 @@ public class SnakeGame extends JFrame {
         Timer timer = new Timer(100, e -> gameLoop());
         timer.start();
 
+
         repaint();
     }
 
@@ -340,6 +341,7 @@ public class SnakeGame extends JFrame {
     private void initializeSaveButton() {
         pauseScreen.getSaveButton().addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
             int option = fileChooser.showSaveDialog(this);
             if (option == JFileChooser.APPROVE_OPTION) {
                 File file = fileChooser.getSelectedFile();
@@ -353,6 +355,7 @@ public class SnakeGame extends JFrame {
     private void initializeImportButton() {
         startScreen.getImportButton().addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
             int option = fileChooser.showOpenDialog(this);
             if (option == JFileChooser.APPROVE_OPTION) {
                 paused=true;

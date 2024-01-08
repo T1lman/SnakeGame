@@ -2,6 +2,7 @@ package SnakeGame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 
 // Die Klasse PauseScreen erweitert JPanel und repräsentiert den Pausebildschirm des Spiels.
@@ -35,11 +36,8 @@ public class PauseScreen extends JPanel {
         saveButton = new JButton("Speichern");
         saveButton.setPreferredSize(new Dimension(150, 50));
         saveButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        saveButton.addActionListener(e -> {
-            game.togglePauseScreen();
-            setVisible(false);
-            game.saveGameState(null);
-        });
+
+
 
         // Initialisierung des Fortsetzen-Buttons
         JButton resumeButton = new JButton("Fortsetzen");
@@ -68,17 +66,14 @@ public class PauseScreen extends JPanel {
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         exitButton.addActionListener(e -> System.exit(0));
 
-        buttonPanel.add(Box.createRigidArea(new Dimension(0, 0)));
-        buttonPanel.add(exitButton);
-
         add(buttonPanel);
 
         buttonPanel.add(resumeButton);
-        buttonPanel.add(Box.createRigidArea(new Dimension(0, 0)));
+
         buttonPanel.add(newGameButton);
-        buttonPanel.add(Box.createRigidArea(new Dimension(0, 0)));
+
         buttonPanel.add(saveButton);
-        buttonPanel.add(Box.createRigidArea(new Dimension(0, 0)));
+
         buttonPanel.add(exitButton);
 
         add(buttonPanel);
